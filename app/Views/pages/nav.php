@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark nav-menu">
+<nav class="navbar navbar-expand-lg navbar-dark fontstyle nav-menu">
     <div class="container-fluid">
 
         <!-- Logo -->
@@ -34,7 +34,7 @@
                                 <?= esc($link['label']) ?>
                             </a>
 
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu fontstyle">
                                 <?php foreach ($link['dropdown'] as $item): ?>
                                     <li>
                                         <a class="dropdown-item" href="#">
@@ -59,8 +59,6 @@
             </ul>
         </div>
 
-        <!-- Background image -->
-      
 
     </div>
 </nav>k

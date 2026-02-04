@@ -1,16 +1,22 @@
-<section class="footer text-white">
+<section class="cta-footer">
     <div class="container text-center">
+        <h2 class="cta-title">
+            <?= esc($footer['title']) ?>
+            <span>
+                <?= esc($footer['footer_hl']) ?>
+            </span>
+        </h2>
 
-        <h3 class="fw-bold mb-4"><?= esc($footer['title']) ?></h3>
-
-        <form class="footer-signup">
-            <div class="footer-form-group">
-                <input
-                    type="email"
-                    class="footer-form"
+        <form class="cta-form" method="post" action="#">
+            <div class="cta-input-group">
+                <input type="email"
+                    name="email"
+                    class="form-control cta-input fontstyle"
                     placeholder="<?= esc($footer['placeholder']) ?>"
                     required>
-                <button class="btn btn-danger footer-btn">
+
+                <button type="submit"
+                    class="btn cta-btn">
                     <?= esc($footer['button']) ?>
                 </button>
             </div>
