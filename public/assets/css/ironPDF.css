@@ -6,17 +6,86 @@
 
 body {
     background-color: #402640;
+    margin: 0 auto;
+
+
+
+}
+
+.fontstyle {
+    font-size: 14px;
+}
+
+/* NAVIGATION STYLING */
+.nav-menu {
+    z-index: 2;
+
+}
+
+.navbar-brand,
+.navbar-toggler {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.nav-menu .nav-link {
+    color: #fff;
+    padding: 10px;
+    transition: all 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+
+.nav-menu .nav-link:hover {
+    color: #c6aac6;
+    transform: scale(1.05);
+}
+
+.dropdown-menu {
+    padding: 0;
+    margin: 0;
+
+}
+
+.dropdown-menu .dropdown-item {
+    transition: all 0.2s ease-in-out;
+    padding: 12px 20px;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #c6aac6;
+    color: #2b0f28;
+}
+
+
+/* HERO SECTION STYLING */
+.hero {
+    position: relative;
+    background-color: #402640;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 35px;
     width: 100%;
+
+}
+
+.image-cont {
+    padding: 0;
+    margin: 0;
 }
 
 .image-bg {
-    display: flex;
-    justify-content: end;
     position: absolute;
-    top: 0;
-    height: 630px;
-    z-index: 1;
+    top: -90px;
     right: 0;
+    width: 650px;
+    height: 650px;
+    z-index: 1;
 }
 
 @media (max-width: 1200px) {
@@ -31,52 +100,6 @@ body {
     }
 }
 
-/* NAVIGATION STYLING */
-
-.navbar-brand,
-.navbar-toggler,
-.nav-item {
-    display: flex;
-}
-
-.nav-menu {
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-.nav-menu .nav-link {
-    color: #fff;
-    padding: 10px;
-    margin: auto;
-    transition: all 0.2s ease-in-out;
-}
-
-.nav-menu .nav-link:hover {
-    color: #c6aac6;
-    font-size: 15px;
-}
-
-.dropdown-menu {
-    padding: 0;
-    margin: 0;
-}
-
-.dropdown-menu .dropdown-item {
-    transition: all 0.2s ease-in-out;
-}
-
-.dropdown-menu .dropdown-item:hover {
-    background-color: #c6aac6;
-    color: #2b0f28;
-}
-
-
-/* HERO SECTION STYLING */
-.hero {
-    padding: 10px;
-
-}
-
 .hero-spacing {
     margin: 15px 0;
 }
@@ -86,7 +109,17 @@ body {
 }
 
 .hero-title {
-    font-size: 60px;
+    font-size: 50px;
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        white-space: normal;
+    }
 
 }
 
@@ -99,9 +132,9 @@ body {
 /* REGISTER SECTION STYLING */
 .register {
     width: 100%;
-    position: relative;
     padding: 40px;
     background: linear-gradient(90deg, #8e608e, #402640);
+    overflow: hidden;
 
 }
 
@@ -117,16 +150,17 @@ body {
     display: flex;
     max-width: 575px;
     background: #fff;
-    border-radius: 40px;
+    border-radius: 50px;
     border: 4px solid #c7abc7;
 
 }
 
 .signup-form-group .form-control {
     border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    padding: 20px 30px;
+    background: transparent;
+    border-radius: 50px;
+
+    padding: 18px 30px;
 
 }
 
@@ -136,8 +170,8 @@ body {
 }
 
 .signup-form .btn-signup {
-    font-size: 16px;
-    background: linear-gradient(90deg, #8e608e, #553355);
+
+    background: linear-gradient(135deg, #ff3c7b, #c41c5a);
     padding: 0 30px;
     width: 300px;
     color: #fff;
@@ -145,8 +179,8 @@ body {
     border-radius: 30px;
 }
 
-.btn-signup:hover {
-    font-size: 17px;
+.signup-form .btn-signup:hover {
+    background: linear-gradient(135deg, #ff5a8f, #d92a6c);
 
 }
 
@@ -154,11 +188,25 @@ body {
     background: #c7abc7;
     color: #8e608e;
     padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.status-text .small {
+    text-wrap: nowrap;
+}
+
+.lang-style {
+    padding-left: 5px;
+}
+
+.lang {
+    display: inline-block;
+    transition: transform 0.2s ease;
+    gap: 15px;
 }
 
 .lang:hover {
-    font-size: 17px;
-    transition: all 0.2s ease-in-out;
+    transform: scale(1.2);
 }
 
 /* SERVICES SECTION STYLING */
@@ -189,13 +237,33 @@ body {
 
 
 /* SERVICE_DESC SECTION STYLING */
-.services_desc {
+.service_desc {
     background: #290c24;
 }
 
 /* VISION SECTION STYLING */
 .vision {
     background: #402640;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vision-img {
+    padding: 0;
+    margin: auto 0;
+}
+
+@media (max-width: 576px) {
+    .img-icon {
+        height: 250px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .page-text {
+        text-align: center;
+    }
 }
 
 /* LIBRARY SECTION STYLING */
@@ -215,7 +283,6 @@ body {
 
 .status {
     background: #331433;
-    font-size: 12px;
     padding: 10px;
     margin-right: 10px;
     width: 150px;
@@ -227,36 +294,78 @@ body {
 }
 
 /* FOOTER SECTION STYLING */
-
-.footer {
+.cta-footer {
     padding: 40px 0;
     background: #260c24;
 }
 
-.footer-form-group {
-    display: inline-flex;
-    justify-content: center;
-    position: relative;
+.cta-title {
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.cta-title span {
+    color: #c6aac6;
+}
+
+.cta-form {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.cta-input-group {
+    display: flex;
     align-items: center;
+    background-color: #f2f2f2;
+    border-radius: 50px;
 
 }
 
-.footer-form {
-    width: 520px;
-    border: 2px solid #fff;
+.cta-input {
+    border: none;
+    background: transparent;
+    padding: 16px 22px;
+    box-shadow: none;
+    border-radius: 50px;
+    align-items: center;
+}
 
-    @media (max-width: 520px) {
-        width: 470px;
+.cta-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.cta-btn {
+    background: linear-gradient(135deg, #ff3c7b, #c41c5a);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 12px 30px;
+    margin-right: 4px;
+    border: none;
+    white-space: nowrap;
+
+}
+
+.cta-btn:hover {
+    background: linear-gradient(135deg, #ff5a8f, #d92a6c);
+    color: #fff;
+}
+
+@media (max-width: 576px) {
+    .cta-input-group {
+        flex-direction: row;
+        align-items: center;
     }
-}
 
-.footer-btn {
-    position: absolute;
-    right: 2px;
-}
+    .cta-form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
 
-.footer-form,
-.footer-btn {
-    border-radius: 30px;
-    padding: 15px;
+    .cta-btn {
+        margin-right: 2px;
+    }
+
 }

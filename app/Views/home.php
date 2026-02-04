@@ -16,7 +16,7 @@
 <body>
     <?= view('pages/nav', ['nav' => $nav]) ?>
 
-    <?= view('pages/image_bg', ['image_bg' => $image_bg]) ?>
+
     <?= view('pages/hero', ['hero' => $hero]) ?>
     <?= view('pages/register', ['register' => $register]) ?>
     <?= view('pages/services', ['services' => $services]) ?>
